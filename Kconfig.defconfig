@@ -1,0 +1,31 @@
+if SHIELD_EYELASH_CORNE_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Eyelash Corne"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default y
+
+endif
+
+
+if SHIELD_EYELASH_CORNE_LEFT || SHIELD_EYELASH_CORNE_RIGHT
+
+config ZMK_SPLIT
+    default y
+
+# Display driver defaults intentionally live in the display shield.
+# Do not force I2C/SSD1306 here because the minimal test uses the
+# SPI-based LS0XX nice!view display.
+
+if ZMK_BACKLIGHT
+
+config PWM
+    default y
+
+config LED_PWM
+    default y
+
+endif # ZMK_BACKLIGHT
+
+endif
