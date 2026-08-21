@@ -1,7 +1,7 @@
 ---
 include:
   - board: eyelash_nano
-    shield: eyelash_corne_right
+    shield: eyelash_corne_right nice_view_gem
 
   - board: eyelash_nano
     shield: eyelash_corne_left nice_view_gem
